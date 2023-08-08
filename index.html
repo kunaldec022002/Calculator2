@@ -135,7 +135,7 @@
             <button onclick="pressKey('9')" class="btn">9</button>
             <button onclick="pressKey('8')" class="btn">8</button>
             <button onclick="pressKey('7')" class="btn">7</button>
-            <button onclick="pressKey('x')" class="btn clr">x</button>
+            <button onclick="pressKey('*')" class="btn clr">x</button>
         </div>
         <div class="cal-btn">
             <button onclick="pressKey('6')" class="btn">6</button>
@@ -152,7 +152,7 @@
         <div class="cal-btn">
             <button onclick="pressKey('0')" class="btn">0</button>
             <button onclick="pressKey('/')" class="btn">/</button>
-            <button onclick="pressKey('=')" class="btn clr">=</button>
+            <button onclick="calculate()" class="btn clr">=</button>
             <button onclick="pressKey('%')" class="btn clr">%</button>
         </div>
         <div class="clear-btn">
@@ -170,6 +170,17 @@
                 const inputElement =document.getElementById('cal-screen');
                 inputElement.value+=key;
             }
+
+            function calculate()
+            {
+                const inputElement =document.getElementById('cal-screen');
+                const result = eval(inputElement.value);
+              inputElement.value=result;
+
+            }
+
+
+            
         </script>
     </body>
 </html>
