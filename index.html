@@ -72,15 +72,17 @@
  .clear-btn
  {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     margin-top: 20px;
+    
     
 }
  .Clear
  {
     padding: 8px;
     font-size: 20px;
-    margin-right: 28px;
+    width: 295px;
+    margin-left: 5px;
     border-radius: 10px;
     cursor: pointer;
     background-color: crimson;
@@ -152,11 +154,11 @@
         <div class="cal-btn">
             <button onclick="pressKey('0')" class="btn">0</button>
             <button onclick="pressKey('/')" class="btn">/</button>
-            <button onclick="calculate()" class="btn clr">=</button>
+            <button onclick="calculate('=')" class="btn clr">=</button>
             <button onclick="pressKey('%')" class="btn clr">%</button>
         </div>
         <div class="clear-btn">
-            <button class="Clear">Clear</button>
+            <button onclick="ClearScreen()" class="Clear">Clear</button>
         </div>
         
         </div>
@@ -175,7 +177,14 @@
             {
                 const inputElement =document.getElementById('cal-screen');
                 const result = eval(inputElement.value);
-              inputElement.value=result;
+                inputElement.value=result;
+
+            }
+
+            function ClearScreen()
+            {
+                const inputScreen = document.getElementById('cal-screen');
+                inputScreen.value = ''
 
             }
 
