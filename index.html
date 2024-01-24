@@ -4,123 +4,8 @@
         <title>
             Calculator
         </title>
-        <style>
-            .cal-container
-{
-    background-color:black;
-    height: 490px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    padding-top: 10px;
-    border-radius: 15px;
-    border: 3px solid whitesmoke;
-    box-shadow:  5px 7px 10px 4px #000000;
- }
- 
+        <link rel="stylesheet" href="./css/index.css"/>
 
-   #cal-screen
-{
-    background-color:lavender;
-    font-size:22px;
-    padding: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -10px;
-    padding-bottom: 15px;
-    border-radius: 5px;
-    height: 40px;
-    width: 300px;
- }
- .cal-btn
- {
-    display: flex;
-    justify-content: space-evenly;
- }
-
- .btn 
- {
-    background-color: springgreen;
-    font-size: 30px;
-    margin-top: 20px;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    box-shadow: 1px 2px 5px 1px white;
-    cursor: pointer;
- }
-
- .btn:hover
- {
-    border-radius: 13px;
-    cursor: pointer;
- }
- .clr
- {
-    background-color:chocolate;
-    cursor: pointer;
- }
-  .clr:hover
-  {
-    background-color: brown;
-  }
-
- .clear-btn
- {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    
-    
-}
- .Clear
- {
-    padding: 8px;
-    font-size: 20px;
-    width: 295px;
-    margin-left: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: crimson;
- }
-
- .Clear:hover
- {
-    background-color: springgreen;
-    border-radius: 13px;
- }
- .rtc
- {
-    color: white;
-    font-size: 20px;
-    text-align: right;
-    margin-right: 10px;
-    margin-top: 5px;
- }
-
- .screen-box
- {
-    margin-right: 18px;
-    display: flex;
-    justify-content: end;
- }
- .screen
- {
-    display: inline-block;
-    height: 25px;
-    width: 40px;
-    border: 1px solid black;
-    margin-top: 10px;
-    background-color: aliceblue;
-    border-radius: 5px;
-}
-
-        </style>
     </head>
 
  
@@ -128,7 +13,7 @@
         <div class="cal-container">
 
         <p class="rtc"> Calculator</p>
-        <input type="text" id="cal-screen" />
+        <input type="text" id="cal-screen" readonly/>
         <div class="screen-box">
         <div class="screen"></div>
         <div class="screen"></div>
@@ -155,8 +40,9 @@
         <div class="cal-btn">
             <button onclick="pressKey('0')" class="btn">0</button>
             <button onclick="pressKey('/')" class="btn">/</button>
-            <button onclick="calculate('=')" class="btn clr">=</button>
             <button onclick="pressKey('%')" class="btn clr">%</button>
+            <button onclick="calculate('=')" class="btn clr">=</button>
+
         </div>
         <div class="clear-btn">
             <button onclick="ClearScreen()" class="Clear">Clear</button>
